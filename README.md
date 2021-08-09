@@ -8,3 +8,5 @@ The step definitions have not been scripted out completely since more time and i
 Some other improvements that can be made to this framework is a helper class for browser selection and start-up/teardown functions.
 
 Besides testing the UI, we should also perform Integration/API and Unit Tests to ensure that the system is working properly.
+API tests: Validate that Videos can be uploaded successfully
+Unit tests: Validate that fields are taking the correct types of data
