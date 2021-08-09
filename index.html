@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+      function validateForm() {
+          var x = document.forms["addnewvideoform"]["vtitle"].value;
+          if (x == "" || x == null) {
+              alert("Required title field is missing");
+              return false;
+          }
+          var y = document.forms["addnewvideoform"]["rdate"].value;
+          if (y == "" || y == null) {
+              alert("Required Release Date field is missing");
+              return false;    
+          }
+      }
+      </script>
+      <img src="sanslogo.png" alt="sanslogo" width="250" height="100">
+  </head>
+
+  <body style="background-color:rgb(50, 50, 50);">
+    <br>
+    <svg width="400" height="30">
+      <rect width="400" height="30" style="fill:rgb(80,80,80);" />
+      Sorry, your browser does not support inline SVG.  
+    </svg>
+    
+    <form style="color:orange;" name="addnewvideoform" action="/action_page.php" onsubmit="return validateForm()" method="post" required>
+      <br>
+      <label for="vtitle">Title:</label>
+      <input type="text" id="vtitle" maxlength="200" name="vtitle" value=""><br><br>
+      <label for="rdate">Release Date:</label>
+      <input type="text" id="rdate" min="2015-01-10" name="rdate" value=""><br><br>
+      <label for="rating">Rating:</label>
+      <input type="number" id="rating"  min="1" max="5" name="rating" value=""><br><br><br>
+      <input type="submit" value="Add Movie">
+
+    <p>
+    <video width="400" controls>
+      <source src="mov_bbb.mp4" type="video/mp4">
+      <source src="mov_bbb.ogg" type="video/ogg">
+      Your browser does not support HTML video.
+    </video>
+    </p>
+
+    </form> 
+
+  </body>
+</html>
